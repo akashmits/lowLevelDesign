@@ -1,0 +1,72 @@
+Design a table reservation system for restaurants.
+
+Zomato: online platform: user can come on app/ web portal
+
+City wise restaurant : city
+
+list<restaurant>
+
+select the res:
+
+fill the req for table / need table:
+no of peoples
+timing:
+
+
+assign table number to the customer
+
+1: Booking the table
+
+
+
+
+2: cancel the table :
+
+we do process: assign the table to customer
+
+
+Fun. Req:
+
+Admin part: Configuration req:
+1: City wise restaurant
+2: Restaurant/Hotel wise group of table
+3: Admin can add table, remove table
+3: timing based restaurant: open and closed
+
+1: User can search hotel based on city
+2: User can book table(No of people) for selected restaurant
+3: Txn History: check history of the booking
+4: Notication Req
+
+
+Non Fun Req:
+1: System should highly available, and fault tolerance
+2: able to handle concurrent txn
+
+
+Design
+
+Admin
+   addRestaurant();
+   updateRestaurant();
+   deleteRestaurant(); //
+
+
+
+Customer
+custId
+
+
+
+
+Restaurant
+
+
+
+
+
+
+
+
+
+P0:
