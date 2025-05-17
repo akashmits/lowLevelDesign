@@ -1,0 +1,23 @@
+Add Project on Git first Time:
+git remote add origin https://github.com/akashmits/lowLevelDesign.git
+
+git add .
+git commit -m "Initial Commit"
+
+If you push code first time then you will get error:
+To https://github.com/akashmits/lowLevelDesign.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/akashmits/lowLevelDesign.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+To solve this error, need to rebase branch which branch u want to push code:
+
+ git pull --rebase origin main
+
+then use command push code:
+git push origin main
+
+
