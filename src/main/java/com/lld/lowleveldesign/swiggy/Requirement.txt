@@ -1,0 +1,94 @@
+The food delivery service should allow customers to browse restaurants, view menus, and place orders.
+Restaurants should be able to manage their menus, prices, and availability.
+Delivery agents should be able to accept and fulfill orders.
+The system should handle order tracking and status updates.
+The system should support multiple payment methods.
+The system should handle concurrent orders and ensure data consistency.
+The system should be scalable and handle a high volume of orders.
+The system should provide real-time notifications to customers, restaurants, and delivery agents.
+
+FoodDeliveryService -> main service
+
+
+
+IPerson
+Customer
+
+Restaurant
+DeliveryAgent
+Order
+Address
+Contact
+DeliveryInfo
+ Address address;
+ contactNo;
+ contactName;
+OrderStatus
+INITIATED,IN_PROGRESS,DELIVERY_AGENT_ASSIGNED,DELIVED,COMPLETED
+
+PaymentProcessor
+    public PaymentInfo doPayment(InstrumentDetails instrumentDetails);
+
+NotificationProcessor
+sentNotification(Notification details)
+
+
+EmailNotification implements NotificationProcessor
+SMSNotification
+PushNotification
+
+
+
+cardPaymentProcess implements PaymentProcessor{
+}
+
+PaymentMethod
+CARD,UPI,CASH
+
+Customer
+   List<Restaurant>   search(String name);
+   List<Item> viewMenu(String restaurantId);
+   Order placedOrder(DeliveryInfo deliveryInfo ,List<Item> order)
+   Order payment(OrderId orderId, PaymentMethod method,InstrumentDetail instrmentDetail)
+   Order checkStatus(String orderId);
+
+
+
+
+
+Restaurant
+id;
+List<Item> items;
+
+
+Item
+itemId
+itemName
+quantity
+price
+isAvailable
+quantity
+
+
+
+
+List<Restaurant>
+
+
+SearchController
+    public List<Restaurant> searchRestaurant(String text)
+        {
+            for()
+        }
+
+SearchRestaurant
+
+
+restaurantIndex
+id
+name
+type
+itemId
+itemName
+isAvailable
+quantity

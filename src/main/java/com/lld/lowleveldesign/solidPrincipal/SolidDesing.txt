@@ -1,0 +1,20 @@
+SOLID Principal:
+
+1:SOLID principal(Object Oriented Desing Concept)
+Solid refers to five design principels in object oriented programming, designed to reduce code rot and improve the value,
+function, and maintainability of software.
+The SOLID principles help the user develop less coupled code.
+If code is tightly coupled, a group of classes are dependent on one another.
+This should be avoided for better maintainability and readability.
+    1.1: Single Responsibility Principal: Each class should have only one responsibility, only one reason to change
+        Mixing Responsibilites also makes the class harder to understand and harder to test, decresing cohesion.
+
+    1:2: Open Closed Principal: classes should be open for extension but close for modification
+        Applying OCP to your projects limits the need to change source code once it hasbeen written, tested and debugged.
+        This reduces the riskof introducing new bugs to existing code, leading to more robust software
+    1.3: Liskov substitution: any interface should be replacable by any of its implementation without breaking the logic
+    1.4: Interface segregation : Instead of having one general purpose interfaces ,its better to have  specific interface
+    1.5: Dependancy inversion: Depend on abstraction, not on concration
+        The Dependency Inversion Principle states that high level modules should not depend upon low level modules;
+        they should depende on abstractions.
+        Secondly, abstractions should not depend upon details; details should depend upon abstractions.

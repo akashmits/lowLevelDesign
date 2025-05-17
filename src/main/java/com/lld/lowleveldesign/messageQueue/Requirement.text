@@ -1,0 +1,50 @@
+implement Message Queueing System. The focus was on multithreading and Design patterns
+
+discussion:
+exact one message delivery:
+
+let think about topic-> producer push data -> consumer consume then data
+lets do it simple one producer and one consumer
+we have multiple producer and multiple consumer
+
+
+
+topic
+
+producer put data in this topic : <topic_name>
+
+consumer Group: <topic_name>
+multiple consumer group subscribe this topic then same data can read multiple consumer
+
+
+
+lets do it simple one producer and one consumer
+we have multiple producer and multiple consumer
+
+
+aAdditional Req:
+policy : latest , earliest
+retention period : <>
+size :
+
+
+this application run on multiple threaded env:
+
+<multiple Producer>producer -> topic ->  <- consumer read Data <multiple consumer>
+               ^
+               |
+            consumer
+
+
+Non Functional Req:
+1: Exact one delivery
+
+
+
+
+Producer
+Topic
+Consumer
+    -consumerGroup
+
+

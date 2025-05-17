@@ -1,0 +1,121 @@
+Let's make an object-oriented design for a multi-floor Parking Lot
+
+Need working code
+
+
+User
+
+
+ParkingLot
+
+
+multiple type vehicle park?
+Ans: yes
+
+Two wheeler
+four wheeler
+Heavy Loading wheeler
+
+is this free parking or paid parking
+>>Paid parking
+
+parking price model:
+let assume based on hour basis
+
+any dynamic pricing model?
+for now no, but we can extend the feature // out of scope for now
+
+is there any strategy for parking allocation?
+yes: Nearest allocation correnpondence of floor
+
+
+
+Actor part:
+
+
+ParkingLot
+Floor<Slot> floorBasedParking;
+Map<String,ParkVehicle>
+Map<VehicleType,Price>
+
+public Slot findParkingLot(VehicleType vehicleType){
+
+}
+
+public double checkOutVehicle(String vehicleId){
+
+}
+
+Parking:
+Slot :
+slotNo
+floorNo
+vehicleType
+isAvailable
+
+
+Floor<Slot> floorBasedParking;
+Vehicle: TWO,FOUR,Heavy Loading
+
+ParkVehicle:
+slotNo
+vehicleNo
+vehicleType
+vehicleCheckInTime
+vehicleCheckOutTime
+
+
+
+Price
+priceId
+vehicleType
+perHourPrice;
+
+Functionality:
+Admin: Add/DELETE/UPDATE FLoor
+       Add/DELETE/UPDATE SPOT
+        Add/DELETE    System Attandent
+        ADD/DELETE/UPDATE price
+        Entrance/Exit gate modification
+
+
+System Attendant:
+        SCAN vehicle
+        Fair collection via cash or credit card or debit card or upi payment
+
+System:
+    Display total parking availabilty on Entrance Gate
+    Display total parking availabilty on Floor
+    Price Calculation
+    Based on Entrance Gate, return the nearest spot available
+
+
+Customer :
+
+
+Classes
+ParkingLot
+ParkingFloor
+ParkingSpot
+VehicleType
+Customer -> System Attandant , Admin
+BasePrice -> HourlyPrice, DailyPrice
+SpotProcessor->  process(VehicleType,gateNo)
+NearestFloorProcessor
+EntrancePanel
+ExitPanel
+Payment
+ParkingDisplayBoard
+ParkingAttendantPortal
+CustomerInfoPortal
+ElectricPanel
+
+
+
+
+
+
+
+
+
+

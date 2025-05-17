@@ -1,0 +1,77 @@
+Designing a Parking Lot System
+
+
+Requirement:
+The parking lot should have multiple levels, each level with a certain number of parking spots.
+The parking lot should support different types of vehicles, such as cars, motorcycles, and trucks.
+Each parking spot should be able to accommodate a specific type of vehicle.
+The system should assign a parking spot to a vehicle upon entry and release it when the vehicle exits.
+The system should track the availability of parking spots and provide real-time information to customers.
+The system should handle multiple entry and exit points and support concurrent access.
+
+Discussion:
+
+
+1: We can add parking lot dynamically or one time parking lot add?
+Ans: yes parking lot can we modified : add or delete or update
+
+2: In parking lot we have multiple entry and exits point or single entry point?
+Ans: yes , parking have multiple gate for entry and exit
+
+
+
+VehicleType
+TwoWheeler
+FourWheeler
+HeavyWheeler
+
+
+Status
+OCCUPY, FREE, INREPAIR
+
+
+
+
+ParkingLot
+List<Floor> parkingLots;
+
+
+Floor
+Map<VehicleType, List<ParkingPosition>> parkings;
+
+ParkingPosition
+int parkingLotId
+VehicleType vehicleType
+Status status;
+
+VehicleDetails
+String vehicleNo;
+String vehicleType;
+String color;
+
+ParkingTicket
+int floorNo;
+int parkingLotId;
+VehicleDetails vehicleDetails;
+Date parkedIn;
+Date parkedOutTime;
+Double charge;
+
+
+
+
+
+ParkingLotService
+public void addParking(Floor floorNo, VehicleType vehicleType);
+public List<Floor> getParkingLot(VehicleType vehicleType);
+public ParkingTicket assignParking(VehicleType vehicle, VehicleDetails vehicleDetails);
+
+
+
+
+
+
+
+
+
+
