@@ -1,0 +1,89 @@
+Online Movie ticket booking system LLD
+
+
+
+This is only for booking or searching the movie then select movies?
+yes we require search functionality
+
+user can search by location/ city/ current location
+user can directly search via movie name?
+user can directly search via actor name?
+user can directly search latest movie
+user can directly search
+
+
+user can searching for movie, filter can be anything
+
+
+User
+Movie
+
+
+
+Functionality
+
+SearchMovie
+BookMovie -> seat availability then book
+Notification -> Ticket send via notificaton (email, sms,push)
+BookingHistory
+
+NonFunctionality
+1: System Should handle to assign one seat to multiple user at same show time
+2: System should able to handle concurrency
+
+
+Classes and RelationShip
+
+User-> Customer
+
+
+
+City
+Cinema
+SeatType
+    Standard, VIP-Premium Recliner-motion
+
+Price
+    basePrice
+    gst
+
+Threatre
+    Map<SeatType, Price> priceMap
+    Map<SeatType,Seat> seats;
+Actor
+MovieType
+    ACTION, SPORTS,FICTION,NON-FICTION
+Seat
+    seatNo
+    seatType
+    isBooked
+Movie
+ movieId
+ movieName
+ List<Actor> actors
+ MovieType
+ releastedDate
+ movieRating
+
+Ticket
+    ticketId
+    cinemaId
+    movieId
+    showTiming
+    List<Seat> seatsInfo;
+    paymentId
+    status
+
+Payment
+    paymentId
+    AccountInfo accountInfo;
+    totalAmount
+    status
+
+
+AccountDetails
+UpiDetails
+WalletDetails
+AccountInfo
+
+
